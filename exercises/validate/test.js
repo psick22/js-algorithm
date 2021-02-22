@@ -11,6 +11,14 @@ test('Validate recognizes a valid BST', () => {
   expect(validate(n)).toEqual(true);
 });
 
+test('빈 트리', () => {
+  const n = new Node(10);
+  n.left = new Node(11);
+  n.right = new Node(8);
+
+  expect(validate(n)).toEqual(false);
+});
+
 test('Validate recognizes an invalid BST', () => {
   const n = new Node(10);
   n.insert(5);
